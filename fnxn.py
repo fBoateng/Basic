@@ -28,13 +28,23 @@ def menu(choices, title, prompt):
     
     return answer
 
+def read_menu(filename):
+    f = open(filename)
+    temp = f.readlines()
+    result = []
+    for item in temp:
+        result.append(item.strip())
+    f.close()
+    return result
 
-drinks = ["chocolate", "coffee", "decaf"]
-flavors = ["caramel", "vanilla", "peppermint", "raspberry", "plain"]
-toppings = ["chocolate", "cinnamon", "caramel"]
+drinks = read_menu('drinks.txt')
+flavor = read_menu('flavor.txt')
+toppings = read_menu('toppings.txt')
+
+
 
 drink = menu(drinks, "Erik's Coffee Shop drinks", "Choose your drink: ")
-flavor = menu(flavors, "Erik's Coffee Shop flavors", "Choose your flavor: ")
+flavor = menu(flavor, "Erik's Coffee Shop flavors", "Choose your flavor: ")
 topping = menu(toppings, "Erik's Coffee Shop toppings", "Choose your topping: ")
 
 print("Here is your order: ")
