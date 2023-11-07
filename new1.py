@@ -33,35 +33,35 @@
 
 
 
-def pizza_menu(choices, title, prompt):
-    print(title)
-    print('-' *  12)
-    i = 1
-    for c in choices:
-        print(i, c)
-        i += 1
-    choice = int(input(prompt))
-    answer = choices[int(choice) - 1]
+# def pizza_menu(choices, title, prompt):
+#     print(title)
+#     print('-' *  len(title))
+#     i = 1
+#     for c in choices:
+#         print(i, c)
+#         i += 1
+#     choice = int(input(prompt))
+#     answer = choices[int(choice) - 1]
     
-    return answer
+#     return answer
 
 
-food = ['pizza', 'pasta', 'salad', 'soup']
-toppings = ['pepperoni', 'ham', 'mushrooms', 'onions']
-sauces = ['marinara', 'alfredo', 'bbq', 'tomato']
-drinks = ['coffee', 'chocolate', 'lemonade', 'ice tea']
+# food = ['pizza', 'pasta', 'salad', 'soup']
+# toppings = ['pepperoni', 'ham', 'mushrooms', 'onions']
+# sauces = ['marinara', 'alfredo', 'bbq', 'tomato']
+# drinks = ['coffee', 'chocolate', 'lemonade', 'ice tea']
 
 
-meal = pizza_menu(food, 'What would you like?', 'Enter a number: ')
-topping = pizza_menu(toppings, 'What toppings would you like?', 'Enter a number: ')
-sauce = pizza_menu(sauces, 'What sauce would you like?', 'Enter a number: ')
-drink = pizza_menu(drinks, 'What drink would you like?', 'Enter a number: ')
+# meal = pizza_menu(food, 'What would you like?', 'Enter a number: ')
+# topping = pizza_menu(toppings, 'What toppings would you like?', 'Enter a number: ')
+# sauce = pizza_menu(sauces, 'What sauce would you like?', 'Enter a number: ')
+# drink = pizza_menu(drinks, 'What drink would you like?', 'Enter a number: ')
 
-print("Here is your order: ")
-print("Main product: ", meal)
-print("Sauce: ", sauce)
-print("Topping: ", topping)
-print("Drink: ", drink)
-print("Thanks for your order!") 
+# print("Here is your order: ")
+# print("Main product: ", meal)
+# print("Sauce: ", sauce)
+# print("Topping: ", topping)
+# print("Drink: ", drink)
+# print("Thanks for your order!") 
 
     
