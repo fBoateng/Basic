@@ -64,4 +64,17 @@
 # print("Drink: ", drink)
 # print("Thanks for your order!") 
 
-    
+
+import json
+
+order = {
+"name": "Erik",
+"drink": "coffee",
+"flavor": "caramel",
+"topping": "chocolate"
+}
+
+
+f = open("orders.json", "w")
+json.dump(order, f, indent=4)
+f.close()
