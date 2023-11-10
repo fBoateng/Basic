@@ -5,7 +5,7 @@ def main_menu(orders):
     while True:
         order = get_order()
         if order == {}:
-            print('You entered an empty order. Try again.')
+            print('You entered an empty order. exiting.')
             return
         print('Check your order:')
         print(order)
