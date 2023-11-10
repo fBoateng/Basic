@@ -1,6 +1,14 @@
-{
-    "name": "Erik",
-    "drink": "coffee",
-    "flavor": "caramel",
-    "topping": "chocolate"
-}
+[
+    {
+        "name": "luc",
+        "drink": "Chocolate",
+        "flavor": "**Pumpkin spice latte**",
+        "topping": "Powders"
+    },
+    {
+        "name": "geof",
+        "drink": "Coffee",
+        "flavor": "",
+        "topping": ""
+    }
+]
