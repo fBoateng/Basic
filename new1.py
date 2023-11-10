@@ -75,6 +75,25 @@ order = {
 }
 
 
+order1 = {
+    "name": "Alex",
+    "drink": "chocolate",
+    "flavor": "vanilla",
+    "topping": "caramel",
+}
+
+orders = []
+
+orders.append(order)
+orders.append(order1)
+
+
 f = open("orders.json", "w")
 json.dump(order, f, indent=4)
 f.close()
+
+
+save_order = []
+f = open("orders.json", 'r')
+save_order = json.load(f)
+print(save_order)

@@ -1,12 +1,21 @@
-def main_menu():
+import os
+import json
+
+def main_menu(orders):
     while True:
         order = get_order()
+        if order == {}:
+            print('You entered an empty order. Try again.')
+            return
         print('Check your order:')
         print(order)
         confirm = input('Confirm? Press Y to confirm, N to cancel: ').capitalize
-        save_order(order)
-        print('Thanks for your order!')
-        print_order(order)
+        if confirm == 'Y':
+            orders.append(order)
+            print('Thanks for your order!')
+            print_order(order)
+        else:
+            continue
         
 
 def menu(choices, title, prompt):
@@ -73,9 +82,21 @@ def print_order(order):
     print("Thanks for your order!")
     return
 
-def save_order(order):
-    print('Saving order...')
+def save_order(orders, filename):
+    f = open(filename, 'w')
+    json.dump(orders, f, indent=4)
     return
 
 
-main_menu()
+def load_orders(filename):
+    if os.path.exists(filename):
+        f = open(filename, 'r')
+        orders = json.load(f)
+        return orders
+    else:
+        orders = []
+        return orders
+
+orders = load_orders('orders.json')
+main_menu(orders)
+save_order(orders, 'orders.json')
