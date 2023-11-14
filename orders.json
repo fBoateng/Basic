@@ -10,5 +10,23 @@
         "drink": "Coffee",
         "flavor": "",
         "topping": ""
+    },
+    {
+        "name": "yanume",
+        "drink": "chocolate",
+        "flavor": "vanilla",
+        "topping": "cinnamon"
+    },
+    {
+        "name": "Francis",
+        "drink": "decaf",
+        "flavor": "plain",
+        "topping": ""
+    },
+    {
+        "name": "sala",
+        "drink": "decaf",
+        "flavor": "vanilla",
+        "topping": "cinnamon"
     }
 ]
